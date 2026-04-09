@@ -20,17 +20,18 @@ path = Path('project_2.py/grouse_climate_data.csv')
 #path.read_text() opens the csv file and puts all the text into python as one big string
 #splitlines() splits the big string into lines of smaller strings when encounters '\n' (newline character)
 lines = path.read_text().splitlines()
+#this separetes lines of csv file 
 
 #csv.reader() breaks lines whenever it sees a comma so that it creates columns 
 reader = csv.reader(lines)
+#reads lines 
 
 #next sets csv to read the next row in the file so python doesnt read the headers
 #in the for loop which would cause program crash 
 header_row = next(reader)
 
 
-for index, column_header in enumerate(header_row):
-    print(index, column_header)
+#for index, column_header in enumerate(header_row):
 
 dates, highs, lows = [], [], []
 

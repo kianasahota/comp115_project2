@@ -20,6 +20,7 @@ lines = path.read_text().splitlines()
 
 #csv.reader() breaks lines whenever it sees a comma so that it creates columns 
 reader = csv.reader(lines)
+#csv reads 
 header_row = next(reader)
 print(header_row)
 
@@ -50,6 +51,7 @@ for row in reader:
 #plot max temps
 plt.style.use('seaborn-v0_8-pastel')
 fig, ax = plt.subplots(figsize = (10, 6))
+
 ax.plot(dates, highs, color ='red', alpha = 0.5, label = 'High Temperatures')
 ax.plot(dates, lows, color = 'blue', alpha = 0.5, label = 'Low Temperatures')
 ax.fill_between(dates, highs, lows, facecolor = 'blue', alpha = 0.1, label = 'Daily Range')
@@ -57,7 +59,6 @@ ax.fill_between(dates, highs, lows, facecolor = 'blue', alpha = 0.1, label = 'Da
 #fomratting
 ax.set_title("Daily High and Low Temperatures on Grouse Mountain 2026", fontsize = 20) #\n
 ax.set_xlabel('Date in 2026', fontsize = 16)
-fig.autofmt_xdate()
 ax.set_ylabel("Temperature (C)",fontsize=16)
 ax.tick_params(labelsize=12)
 

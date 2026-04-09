@@ -1,15 +1,18 @@
 
 from pathlib import Path 
 #imports pathlib class from Path module 
+#Path finds the csv file with data in it
 
 import csv               
 #imports csv module 
 
 import matplotlib.pyplot as plt 
 #imports matplotlib.pyplot module but shortens pyplot to plt 
+#matplotlib is what makes the graph screen 
 
 from datetime import datetime  
 #imports datetime class from datetime module 
+#datetime helps put the dates on the x axis 
 
 #importing data from csv file
 path = Path('project_2.py/grouse_climate_data.csv') 
@@ -20,9 +23,11 @@ lines = path.read_text().splitlines()
 
 #csv.reader() breaks lines whenever it sees a comma so that it creates columns 
 reader = csv.reader(lines)
-#csv reads 
+
+#next sets csv to read the next row in the file so python doesnt read the headers
+#in the for loop which would cause program crash 
 header_row = next(reader)
-print(header_row)
+
 
 for index, column_header in enumerate(header_row):
     print(index, column_header)

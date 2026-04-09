@@ -1,7 +1,7 @@
 # Grouse Mountain Temperature Analysis 
 
 ![Project Screenshot](temp_graph.png)
-![Project Screenshot](whistler_temp_compare.png)
+![Project Screenshot](whistler_snow_cmp.png)
 
 #Description 
 Our project is a visual analysis of the High and Low Temperatures on Grouse Mountain over different timeframes.

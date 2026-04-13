@@ -3,14 +3,14 @@
 ![Project Screenshot](temp_graph.png)
 ![Project Screenshot](whistler_snow_cmp.png)
 
-Description
+# Description
 This project provides a visual analysis of high and low temperatures on Grouse Mountain and a comparative study of snowfall in Whistler.
 
 Graph 1: Displays the general temperature trends for Grouse Mountain (North Vancouver) in 2026.
 
 Graph 2: Compares snowfall over a 50-year period (1973 vs. 2023) at the Whistler Roundhouse. This comparison uses Whistler data to provide a comprehensive historical perspective that was unavailable for Grouse Mountain.
 
-Features
+# Features
 Shaded Daily Range: Uses the fill_between function to highlight the variance between highs and lows.
 
 Grid Lines: Makes it easy to identify precise values on graph.
@@ -21,7 +21,7 @@ Error Handling: Uses try-except block to ensure the program ignores missing data
 
 Data Iteration: Efficient loops to extract and process dates and temperatures from large datasets.
 
-Built With
+# Built with
 Python 3.x
 
 Matplotlib: For data visualization and graph generation.
@@ -32,7 +32,7 @@ Datetime: For managing and formatting date notation (yyyy-mm-dd).
 
 Pathlib: For reliable file path handling.
 
-Code Overview
+# Code Overview
 Data Extraction with Error Handling
 
 The program iterates through CSV rows and uses a try-except block to manage missing values common in weather datasets.
@@ -57,16 +57,17 @@ Visualizing Temperature Ranges
 We use fill_between to create a shaded area that represents the daily temperature spread.
 
 Python
-# Plotting the lines and shading the range
 ax.plot(dates, highs, color='red', alpha=0.5, label='High Temperatures')
 ax.plot(dates, lows, color='blue', alpha=0.5, label='Low Temperatures')
 ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1, label='Daily Range')
-Pre-requisites
+
+# Pre Requisites 
 You must have Matplotlib installed to run the visualizations:
 
 Bash
 pip install matplotlib
-How to Run
+
+# How To Run
 Clone or download this repository.
 
 Ensure the required CSV files (e.g., whistler_snow_73.csv, whistler_snow_23.csv) are in the project directory.
@@ -79,10 +80,11 @@ Bash
 python grouse_mtn_data.py
 A window will open displaying the trends. Close the window to end the session.
 
-Credits & Data Sources
+# Credits
 Data Provider: Environment and Climate Change Canada
 
-Writers: Lauren Desprez & Kiana Sahota
+# Writers
+Lauren Desprez & Kiana Sahota
 
 
 

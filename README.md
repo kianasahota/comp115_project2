@@ -37,7 +37,7 @@ Data Extraction with Error Handling
 
 The program iterates through CSV rows and uses a try-except block to manage missing values common in weather datasets.
 
-Python
+```python
 dates, highs, lows = [], [], []
 
 for row in reader:
@@ -51,15 +51,16 @@ for row in reader:
     else:
         dates.append(current_date)
         highs.append(high)
-        lows.append(low)
+        lows.append(low)```
+
 Visualizing Temperature Ranges
 
 We use fill_between to create a shaded area that represents the daily temperature spread.
 
-Python
+```python
 ax.plot(dates, highs, color='red', alpha=0.5, label='High Temperatures')
 ax.plot(dates, lows, color='blue', alpha=0.5, label='Low Temperatures')
-ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1, label='Daily Range')
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1, label='Daily Range')```
 
 # Pre Requisites 
 You must have Matplotlib installed to run the visualizations:

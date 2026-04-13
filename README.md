@@ -24,41 +24,38 @@ Built With
 * Python 3.x
 
 Code Overview
+The project is structured around efficient data processing and clear visualization. Key implementations include:
 
-The project is built using functional logic to process and plot weather data. Key code implementations include:
+1. Data Extraction with Error Handling The program iterates through rows of CSV data using a try-except block. This ensures that if a temperature value is missing (a common issue in weather datasets), the program logs the error and continues instead of crashing:
 
-1. Data Extraction with Error Handling The program iterates through rows of CSV data, using a try-except block to ensure that empty strings or malformed data don't crash the analysis:
-
-Bash 
+Python
 dates, highs, lows = [], [], []
 
 for row in reader:
     current_date = datetime.strptime(row[4], '%Y-%m-%d')
-    
     try:
         high = float(row[9])
         low = float(row[11])
-        
     except ValueError:
         print(f"Error parsing data at {current_date}")
         continue
-
     else:
         dates.append(current_date)
         highs.append(high)
         lows.append(low)
+        
+2. Visualizing Temperature Ranges To make the data easy to read at a glance, we use the fill_between function. This creates a shaded "Daily Range" between the high and low temperature lines:
 
-2. Visualizing Temperature Ranges To make the graph more intuitive, the fill_between function is used to highlight the gap between the highs and lows:
-Bash 
-ax.plot(dates, highs, color ='red', alpha = 0.5, label = 'High Temperatures')
-ax.plot(dates, lows, color = 'blue', alpha = 0.5, label = 'Low Temperatures')
-ax.fill_between(dates, highs, lows, facecolor = 'blue', alpha = 0.1, label = 'Daily Range')
+Python
+# Plotting the lines and shading the range
+ax.plot(dates, highs, color='red', alpha=0.5, label='High Temperatures')
+ax.plot(dates, lows, color='blue', alpha=0.5, label='Low Temperatures')
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1, label='Daily Range')
 
 Pre-requisites
 
 Install Matplotlib
-'''bash
-pip install matplotlib
+'''bash pip install matplotlib'''
 
 How to Run
 Clone or download this repository.

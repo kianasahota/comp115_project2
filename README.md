@@ -3,23 +3,23 @@
 ![Project Screenshot](temp_graph.png)
 ![Project Screenshot](whistler_snow_cmp.png)
 
-#Description 
+Description \n
 Our project is a visual analysis of the High and Low Temperatures on Grouse Mountain over different timeframes.
 Our first graph displays the general trends of temperatures in the year of 2026. Since Grouse Mountain is located in North Vancouver, we thought it would be interesting to learn more about weather changes and patterns in a local area.
 Additonally, we created a second graph comparing snowfall over a 50 year period. For this graph, we used data from Whistler as we could not locate enough historical data for Grouse Mountain. The graph looks at snowfall in Whistler at the Whistler Roundhouse in 1973 and compares it with the snowfall there in 2023. 
 
-#Features 
+Features \n
 * Shaded Daily-range: Uses 'fill_between' function to shade daily range between highs and lows
 * Grid Lines: Makes it easy to identify precise values on graph 
 * Legend: Allows user to identify symbols and colours on graph
 * Error Handling: Uses 'try-except' functions to detect and ignore incorrect data so that the program doesn't crash
 
-#Built With 
+Built With \n
 * Matplotlib - Transforms raw data into graphs 
 * CSV module - Used to read and extract data from CSV files
 * Python 3.x 
 
-*Pre-requisites 
+Pre-requisites 
 Install Matplotlib
 '''bash
 pip install matplotlib

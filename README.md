@@ -24,11 +24,12 @@ Built With
 * Python 3.x
 
 Code Overview
+
 The project is built using functional logic to process and plot weather data. Key code implementations include:
 
 1. Data Extraction with Error Handling The program iterates through rows of CSV data, using a try-except block to ensure that empty strings or malformed data don't crash the analysis:
 
-Python
+Bash 
 dates, highs, lows = [], [], []
 
 for row in reader:
@@ -48,7 +49,7 @@ for row in reader:
         lows.append(low)
 
 2. Visualizing Temperature Ranges To make the graph more intuitive, the fill_between function is used to highlight the gap between the highs and lows:
-Python
+Bash 
 ax.plot(dates, highs, color ='red', alpha = 0.5, label = 'High Temperatures')
 ax.plot(dates, lows, color = 'blue', alpha = 0.5, label = 'Low Temperatures')
 ax.fill_between(dates, highs, lows, facecolor = 'blue', alpha = 0.1, label = 'Daily Range')
